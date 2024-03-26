@@ -124,3 +124,53 @@ a:visited{
         animation: none;
     }
 }
+@media print {
+    /* Change the font on your body to Arial with a backup value of  Helvetica The background image should be removed.  */
+
+    body {
+        background-image: none;
+        font-family: Arial, Helvetica;
+        background-color: #f1f1f1;
+    }
+
+    /* Edit the nav/nav_links elements so that they are spaced according to the image above. */
+    nav {
+        width: 100%;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        flex: 1;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    /* Edit the pricing class so that the elements align along the bottom.  As long as it aligns along the bottom we don't care if the cards aren't the same height. */
+    .pricing {
+        align-items: flex-end;
+        flex-wrap: nowrap;
+    }
+
+    /* The card elements should have a solid border of 2px of #45ADDD and use flex-basis of 325px.  */
+    .card {
+        border: solid 2px #45addd;
+        flex-basis: 325px;
+    }
+
+    /* No part of the gallery should be visible. */
+    .gallery {
+        display: none;
+    }
+
+    /* Without using list-style-type add the thumbs up entity as shown in the cards.*/
+    .card > ul > li:nth-child(even)::after {
+        content: "\01F44D";
+    }
+}
+
+
+
+
+
+
+
